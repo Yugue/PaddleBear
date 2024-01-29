@@ -11,7 +11,7 @@ buildscript {
     dependencies {
         classpath 'org.docstr:gwt-gradle-plugin:1.1.29'
         classpath 'org.gretty:gretty:3.1.0'
-        classpath 'com.android.tools.build:gradle:8.1.2'
+        classpath 'com.android.tools.build:gradle:8.2.2'
         classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.20'
         
 
@@ -21,7 +21,7 @@ buildscript {
 allprojects {
     apply plugin: "eclipse"
 
-    version = '1.0'
+    version = '1.03'
     ext {
         appName = "PaddleBear"
         gdxVersion = '1.12.1'
