@@ -23,14 +23,14 @@ public class AssetLoader {
     public static TextureRegion paddlingLeft3;
     public static TextureRegion standbyLeft1;
     public static TextureRegion standbyLeft2;
-    public static Animation standbyLeftAnimation;
+    public static Animation<TextureRegion> standbyLeftAnimation;
 
     public static TextureRegion paddlingRight1;
     public static TextureRegion paddlingRight2;
     public static TextureRegion paddlingRight3;
     public static TextureRegion standbyRight1;
     public static TextureRegion standbyRight2;
-    public static Animation standbyRightAnimation;
+    public static Animation<TextureRegion> standbyRightAnimation;
 
     public static TextureRegion dying1;
     public static TextureRegion dying2;
@@ -44,14 +44,14 @@ public class AssetLoader {
     public static TextureRegion dying10;
     public static TextureRegion dying11;
     public static TextureRegion dying12;
-    public static Animation dyingAnimation;
+    public static Animation<TextureRegion> dyingAnimation;
 
     // background art
     public static TextureRegion backgroundLand;
     public static TextureRegion backgroundSand;
     public static TextureRegion backgroundRiver1;
     public static TextureRegion backgroundRiver2;
-    public static Animation backgroundLowAnimation;
+    public static Animation<TextureRegion> backgroundLowAnimation;
 
     // in game art
     public static TextureRegion shortLog1;
@@ -60,9 +60,9 @@ public class AssetLoader {
     public static TextureRegion longLog2;
     public static TextureRegion babyCub1;
     public static TextureRegion babyCub2;
-    public static Animation shortLogAnimation;
-    public static Animation longLogAnimation;
-    public static Animation babyCubAnimation;
+    public static Animation<TextureRegion> shortLogAnimation;
+    public static Animation<TextureRegion> longLogAnimation;
+    public static Animation<TextureRegion> babyCubAnimation;
 
     // post menu UI
     public static TextureRegion postGameMenu;
@@ -94,11 +94,11 @@ public class AssetLoader {
     public static TextureRegion tsunderStandby2;
     public static TextureRegion wolfStandby1;
     public static TextureRegion wolfStandby2;
-    public static Animation teddyStandbyAnimation;
-    public static Animation spaddulaStandbyAnimation;
-    public static Animation jacubStandbyAnimation;
-    public static Animation tsunderStandbyAnimation;
-    public static Animation wolfStandbyAnimation;
+    public static Animation<TextureRegion> teddyStandbyAnimation;
+    public static Animation<TextureRegion> spaddulaStandbyAnimation;
+    public static Animation<TextureRegion> jacubStandbyAnimation;
+    public static Animation<TextureRegion> tsunderStandbyAnimation;
+    public static Animation<TextureRegion> wolfStandbyAnimation;
 
     // menu UI
     public static TextureRegion creditsButtonUp;
@@ -118,7 +118,7 @@ public class AssetLoader {
     public static TextureRegion titleBear2;
     public static TextureRegion titleBear3;
     public static TextureRegion titleBear4;
-    public static Animation titleBearAnimation;
+    public static Animation<TextureRegion> titleBearAnimation;
 
     // data
     public static Preferences data;
@@ -392,14 +392,14 @@ public class AssetLoader {
         dying12.setTexture(spriteSheet);
         reloadBear(HelperFunctions.getBearEnumFromString(data.getString("activeBear")));
         TextureRegion[] standbyLeft = {standbyLeft1, standbyLeft2};
-        standbyLeftAnimation = new Animation(Constants.PADDLE_TIMER_C, standbyLeft);
+        standbyLeftAnimation = new Animation<>(Constants.PADDLE_TIMER_C, standbyLeft);
         standbyLeftAnimation.setPlayMode(Animation.PlayMode.LOOP);
         TextureRegion[] standbyRight = {standbyRight1, standbyRight2};
-        standbyRightAnimation = new Animation(Constants.PADDLE_TIMER_C, standbyRight);
+        standbyRightAnimation = new Animation<>(Constants.PADDLE_TIMER_C, standbyRight);
         standbyRightAnimation.setPlayMode(Animation.PlayMode.LOOP);
         TextureRegion[] dying = {dying1, dying2, dying3, dying4, dying5, dying6,
                 dying7, dying8, dying9, dying10, dying11, dying12};
-        dyingAnimation = new Animation(0.05f, dying);
+        dyingAnimation = new Animation<>(0.05f, dying);
 
         // font
         font = new BitmapFont(Gdx.files.internal("font.fnt"));

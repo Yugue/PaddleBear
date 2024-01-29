@@ -35,7 +35,7 @@ public class GameRenderer {
     private Scrollable sand;
     private TextureRegion backgroundLand;
     private TextureRegion backgroundSand;
-    private Animation backgroundRiver;
+    private Animation<TextureRegion> backgroundRiver;
 
     // bear
     private Bear bear;
@@ -45,19 +45,19 @@ public class GameRenderer {
     private TextureRegion paddlingRight1;
     private TextureRegion paddlingRight2;
     private TextureRegion paddlingRight3;
-    private Animation standbyLeft;
-    private Animation standbyRight;
-    private Animation dying;
-    private Animation teddyStandby;
-    private Animation spaddulaStandby;
-    private Animation jacubStandby;
-    private Animation tsunderStandby;
-    private Animation wolfStandby;
+    private Animation<TextureRegion> standbyLeft;
+    private Animation<TextureRegion> standbyRight;
+    private Animation<TextureRegion> dying;
+    private Animation<TextureRegion> teddyStandby;
+    private Animation<TextureRegion> spaddulaStandby;
+    private Animation<TextureRegion> jacubStandby;
+    private Animation<TextureRegion> tsunderStandby;
+    private Animation<TextureRegion> wolfStandby;
 
     // in game
-    private Animation shortLog;
-    private Animation longLog;
-    private Animation babyCub;
+    private Animation<TextureRegion> shortLog;
+    private Animation<TextureRegion> longLog;
+    private Animation<TextureRegion> babyCub;
 
     // UI
     private TextureRegion babyCubIcon;
@@ -70,7 +70,7 @@ public class GameRenderer {
     private TextureRegion titleText;
     private Sprite titleTextShade;
     private TextureRegion titleBear1;
-    private Animation titleBear;
+    private Animation<TextureRegion> titleBear;
 
 
     // font
@@ -140,8 +140,8 @@ public class GameRenderer {
         font = AssetLoader.font;
     }
 
-    private Animation getAnimationByBear(BearEnum type) {
-        Animation itemIcon;
+    private Animation<TextureRegion> getAnimationByBear(BearEnum type) {
+        Animation<TextureRegion> itemIcon;
         switch(type) {
             case SPADDULA:
                 itemIcon = spaddulaStandby;
@@ -165,9 +165,9 @@ public class GameRenderer {
     private void drawLowBackground(float runTime) {
         batcher.disableBlending();
         for (Vector2 position : river.getPositions()) {
-            batcher.draw((Texture) backgroundRiver.getKeyFrame(runTime),
-                    position.x, position.y,
-                    river.getWidth(), river.getHeight());
+            batcher.draw(backgroundRiver.getKeyFrame(runTime),
+                         position.x, position.y,
+                         river.getWidth(), river.getHeight());
         }
         batcher.enableBlending();
         for (Vector2 position : sand.getPositions()) {
@@ -184,23 +184,23 @@ public class GameRenderer {
             floater.getTrail().draw(batcher);
             switch(floater.getType()) {
                 case SHORTLOG:
-                    batcher.draw((TextureRegion) shortLog.getKeyFrame(runTime),
-                            floater.getX(), floater.getY(),
+                    batcher.draw(shortLog.getKeyFrame(runTime),
+                                 floater.getX(), floater.getY(),
                             floater.getWidth() / 2, floater.getHeight() / 2,
-                            floater.getWidth(), floater.getHeight(),
-                            1.1f, 1.1f, floater.getRotation());
+                                 floater.getWidth(), floater.getHeight(),
+                                 1.1f, 1.1f, floater.getRotation());
                     break;
                 case LONGLOG:
-                    batcher.draw((TextureRegion) longLog.getKeyFrame(runTime),
-                            floater.getX(), floater.getY(),
+                    batcher.draw(longLog.getKeyFrame(runTime),
+                                 floater.getX(), floater.getY(),
                             floater.getWidth() / 2, floater.getHeight() / 2,
-                            floater.getWidth(), floater.getHeight(),
-                            1.1f, 1.1f, floater.getRotation());
+                                 floater.getWidth(), floater.getHeight(),
+                                 1.1f, 1.1f, floater.getRotation());
                     break;
                 case BABYCUB:
-                    batcher.draw((Texture) babyCub.getKeyFrame(runTime),
-                            floater.getX(), floater.getY(),
-                            floater.getWidth(), floater.getHeight());
+                    batcher.draw(babyCub.getKeyFrame(runTime),
+                                 floater.getX(), floater.getY(),
+                                 floater.getWidth(), floater.getHeight());
             }
         }
     }
@@ -215,10 +215,10 @@ public class GameRenderer {
         boolean paddlingFront = bear.getPaddlingFront();
 
         if (! bear.getIsAlive()) {
-            image = (TextureRegion) dying.getKeyFrame(bear.getDyingTimer());
+            image = dying.getKeyFrame(bear.getDyingTimer());
         } else if (paddleTimer <= 0) {
-            image = (TextureRegion) (paddlingLeft ? standbyLeft.getKeyFrame(runTime) :
-                                standbyRight.getKeyFrame(runTime));
+            image = paddlingLeft ? standbyLeft.getKeyFrame(runTime) :
+                    standbyRight.getKeyFrame(runTime);
         } else if (paddleTimer > Constants.PADDLE_TIMER_B) {
             image = paddlingFront ?
                     (paddlingLeft ? paddlingLeft1 : paddlingRight1) :
@@ -254,7 +254,7 @@ public class GameRenderer {
                 int textHeight = titleText.getRegionHeight() * 3;
                 float textX = Constants.GAME_MID_X - textWidth / 2;
                 float textY = Constants.GAME_MID_Y + 24;
-                batcher.draw((Texture) titleBear.getKeyFrame(runTime),
+                batcher.draw(titleBear.getKeyFrame(runTime),
                         Constants.GAME_MID_X - bearWidth * 1.5f,
                         Constants.GAME_MID_Y - 60,
                         bearWidth * 3, bearHeight * 3);
@@ -336,8 +336,8 @@ public class GameRenderer {
                     batcher.draw(item.getIsPressed() ? shopItemDown : shopItemUp,
                             itemX, itemY, itemWidth, itemHeight);
 
-                    Animation itemIcon = getAnimationByBear(item.getType());
-                    batcher.draw((Texture) itemIcon.getKeyFrame(runTime), itemX + Constants.SHOP_ICON_OFFSET,
+                    Animation<TextureRegion> itemIcon = getAnimationByBear(item.getType());
+                    batcher.draw(itemIcon.getKeyFrame(runTime), itemX + Constants.SHOP_ICON_OFFSET,
                             itemY + Constants.SHOP_ICON_OFFSET, Constants.BEAR_SIZE, Constants.BEAR_SIZE);
 
                     font.setColor(85/255f, 50/255f, 7/255f, 1);
@@ -376,8 +376,8 @@ public class GameRenderer {
                     float panelStartY = Constants.GAME_MID_Y - 57;
                     batcher.draw(extraPanel, panelStartX, panelStartY, panelWidth * 3, panelHeight * 3);
                     ShopItem itemOnDisplay = world.getItemOnDisplay();
-                    Animation itemIcon = getAnimationByBear(itemOnDisplay.getType());
-                    batcher.draw((Texture) itemIcon.getKeyFrame(runTime), panelStartX + 10,
+                    Animation<TextureRegion> itemIcon = getAnimationByBear(itemOnDisplay.getType());
+                    batcher.draw(itemIcon.getKeyFrame(runTime), panelStartX + 10,
                             panelStartY + 10, Constants.BEAR_SIZE, Constants.BEAR_SIZE);
                     font.draw(batcher, "" + itemOnDisplay.getPrice(), panelStartX + 90,
                             panelStartY + 13, 0, 4, false);
@@ -471,7 +471,7 @@ public class GameRenderer {
     }
 
     private void drawDebug() {
-        shapeRenderer.begin(ShapeType.Line);
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
         shapeRenderer.setColor(1, 1, 1, 1);
 
         // draw collisions
