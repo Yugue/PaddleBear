@@ -146,22 +146,22 @@ public class Constants {
 
     // credits
     public final static String CREDITS_STRING_1 =
-            "Credits:";
+            "Credits: Alex Chen, Waznop";
     public final static String CREDITS_STRING_2 =
-            "Developer: Waznop";
+            "Developer: Alex Chen, Waznop";
     public final static String CREDITS_STRING_3 =
             "Artist: Waznop";
     public final static String CREDITS_STRING_4 =
             "Audio: Waznop";
     public final static String CREDITS_STRING_5 =
-            "Waznop: Hong Tai Wei";
+            "Waznop: Hong Tai Wei, Alex Chen";
     public final static String CREDITS_STRING_6 =
             "Please send comments or bugs to:";
     public final static String CREDITS_STRING_7 =
-            "waznop@gmail.com";
+            "inewton.planet@gmail.com";
     public final static String CREDITS_STRING_8 =
             "Have a nice day you fools <3";
     public final static String CREDITS_STRING_9 =
-            "ver.1.02 @UW 2016";
+            "ver.1.03 2023";
 
 }
