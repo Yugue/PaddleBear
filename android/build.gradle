@@ -1,5 +1,5 @@
 android {
-    namespace "com.waznop.paddlebear"
+    namespace "com.pllanet.paddlebear"
     buildToolsVersion "34.0.0"
     compileSdkVersion 33
     sourceSets {
@@ -20,7 +20,7 @@ android {
         }
     }
     defaultConfig {
-        applicationId "com.waznop.paddlebear"
+        applicationId "com.pllanet.paddlebear"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
@@ -85,7 +85,7 @@ tasks.register('run', Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.waznop.paddlebear/com.waznop.paddlebear.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.pllanet.paddlebear/com.pllanet.paddlebear.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"

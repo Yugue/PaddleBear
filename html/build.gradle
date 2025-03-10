@@ -4,8 +4,8 @@ gwt {
     minHeapSize="1G"
 
     src = files(file("src/")) // Needs to be in front of "modules" below.
-    modules 'com.waznop.paddlebear.GdxDefinition'
-    devModules 'com.waznop.paddlebear.GdxDefinitionSuperdev'
+    modules 'com.pllanet.paddlebear.GdxDefinition'
+    devModules 'com.pllanet.paddlebear.GdxDefinitionSuperdev'
     project.webAppDirName = 'webapp'
 
     compiler {
