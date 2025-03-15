@@ -1,4 +1,4 @@
-package com.pllanet.paddlebear;
+package com.pllanet.paddlebeargame;
 
 import aurelienribon.tweenengine.TweenAccessor;
 import com.badlogic.gdx.graphics.g2d.Sprite;

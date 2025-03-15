@@ -7,12 +7,11 @@ import com.badlogic.gdx.math.Intersector;
 import com.pllanet.gameobjects.Bear;
 import com.pllanet.gameobjects.Floater;
 import com.pllanet.gameobjects.ShopItem;
-import com.pllanet.paddlebear.AssetLoader;
-import com.pllanet.paddlebear.Constants;
-import com.pllanet.paddlebear.HelperFunctions;
-import com.pllanet.paddlebear.InputHandler;
-import com.pllanet.paddlebear.TouchScreenEnum;
-import com.pllanet.paddlebear.*;
+import com.pllanet.paddlebeargame.AssetLoader;
+import com.pllanet.paddlebeargame.Constants;
+import com.pllanet.paddlebeargame.HelperFunctions;
+import com.pllanet.paddlebeargame.InputHandler;
+import com.pllanet.paddlebeargame.TouchScreenEnum;
 import com.pllanet.gameobjects.SimpleButton;
 
 import java.util.ArrayList;

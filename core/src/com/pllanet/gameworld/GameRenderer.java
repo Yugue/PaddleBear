@@ -13,13 +13,12 @@ import com.pllanet.gameobjects.Floater;
 import com.pllanet.gameobjects.Scrollable;
 import com.pllanet.gameobjects.ShopItem;
 import com.pllanet.gameobjects.SimpleButton;
-import com.pllanet.gameobjects.*;
-import com.pllanet.paddlebear.AssetLoader;
-import com.pllanet.paddlebear.Constants;
-import com.pllanet.paddlebear.InputHandler;
+import com.pllanet.paddlebeargame.AssetLoader;
+import com.pllanet.paddlebeargame.Constants;
+import com.pllanet.paddlebeargame.InputHandler;
 
 import java.util.ArrayList;
-import static com.pllanet.paddlebear.Constants.GAME_HEIGHT;
+import static com.pllanet.paddlebeargame.Constants.GAME_HEIGHT;
 
 /**
  * Created by Waznop on 2016-08-17.

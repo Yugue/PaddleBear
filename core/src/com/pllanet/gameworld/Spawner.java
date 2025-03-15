@@ -1,7 +1,7 @@
 package com.pllanet.gameworld;
 
 import com.pllanet.gameobjects.Floater;
-import com.pllanet.paddlebear.Constants;
+import com.pllanet.paddlebeargame.Constants;
 
 import java.util.ArrayList;
 import java.util.Iterator;

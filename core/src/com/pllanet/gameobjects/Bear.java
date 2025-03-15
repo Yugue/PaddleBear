@@ -6,9 +6,9 @@ import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.pllanet.gameworld.GameWorld;
-import com.pllanet.paddlebear.AssetLoader;
-import com.pllanet.paddlebear.Constants;
-import com.pllanet.paddlebear.HelperFunctions;
+import com.pllanet.paddlebeargame.AssetLoader;
+import com.pllanet.paddlebeargame.Constants;
+import com.pllanet.paddlebeargame.HelperFunctions;
 
 /**
  * Created by Waznop on 2016-08-17.

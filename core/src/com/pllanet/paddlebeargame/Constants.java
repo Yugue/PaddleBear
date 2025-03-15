@@ -1,4 +1,4 @@
-package com.pllanet.paddlebear;
+package com.pllanet.paddlebeargame;
 
 import com.badlogic.gdx.Gdx;
 import com.pllanet.gameworld.BearEnum;

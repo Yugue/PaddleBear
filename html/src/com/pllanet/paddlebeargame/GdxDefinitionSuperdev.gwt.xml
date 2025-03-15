@@ -6,7 +6,7 @@
 	<inherits name='com.badlogic.ashley_gwt' />
 	<inherits name='Box2DLights' />
 
-    <inherits name='com.pllanet.paddlebear.GdxDefinition' />
+    <inherits name='com.pllanet.paddlebeargame.GdxDefinition' />
 
     <collapse-all-properties />
 

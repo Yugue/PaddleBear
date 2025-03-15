@@ -6,10 +6,10 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.pllanet.paddlebear.AssetLoader;
-import com.pllanet.paddlebear.Constants;
-import com.pllanet.paddlebear.PBGame;
-import com.pllanet.paddlebear.SpriteAccessor;
+import com.pllanet.paddlebeargame.AssetLoader;
+import com.pllanet.paddlebeargame.Constants;
+import com.pllanet.paddlebeargame.PBGame;
+import com.pllanet.paddlebeargame.SpriteAccessor;
 
 /**
  * Created by Waznop on 2016-09-21.

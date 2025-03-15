@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.pllanet.gameworld.ButtonTypeEnum;
 import com.pllanet.gameworld.GameWorld;
-import com.pllanet.paddlebear.AssetLoader;
+import com.pllanet.paddlebeargame.AssetLoader;
 
 /**
  * Created by Waznop on 2016-09-18.

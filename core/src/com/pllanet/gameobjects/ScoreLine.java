@@ -3,8 +3,8 @@ package com.pllanet.gameobjects;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.math.Vector2;
 import com.pllanet.gameworld.GameWorld;
-import com.pllanet.paddlebear.AssetLoader;
-import com.pllanet.paddlebear.Constants;
+import com.pllanet.paddlebeargame.AssetLoader;
+import com.pllanet.paddlebeargame.Constants;
 
 /**
  * Created by Waznop on 2016-09-16.

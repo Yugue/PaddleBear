@@ -1,4 +1,4 @@
-package com.pllanet.paddlebear.client;
+package com.pllanet.paddlebeargame.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
@@ -10,7 +10,7 @@ import com.google.gwt.dom.client.Style;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.pllanet.paddlebear.PBGame;
+import com.pllanet.paddlebeargame.PBGame;
 
 
 public class HtmlLauncher extends GwtApplication {

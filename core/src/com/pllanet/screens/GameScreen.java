@@ -5,8 +5,8 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.pllanet.gameworld.GameRenderer;
 import com.pllanet.gameworld.GameWorld;
-import com.pllanet.paddlebear.Constants;
-import com.pllanet.paddlebear.InputHandler;
+import com.pllanet.paddlebeargame.Constants;
+import com.pllanet.paddlebeargame.InputHandler;
 
 /**
  * Created by Waznop on 2016-08-17.

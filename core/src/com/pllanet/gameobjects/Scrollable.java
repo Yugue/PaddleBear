@@ -1,7 +1,7 @@
 package com.pllanet.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
-import com.pllanet.paddlebear.Constants;
+import com.pllanet.paddlebeargame.Constants;
 
 import java.util.LinkedList;
 

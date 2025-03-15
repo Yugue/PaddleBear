@@ -5,7 +5,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.pllanet.gameworld.BearEnum;
 import com.pllanet.gameworld.GameWorld;
 import com.pllanet.gameworld.ShopItemStateEnum;
-import com.pllanet.paddlebear.AssetLoader;
+import com.pllanet.paddlebeargame.AssetLoader;
 
 /**
  * Created by Waznop on 2016-09-20.

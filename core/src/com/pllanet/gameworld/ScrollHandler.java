@@ -2,7 +2,7 @@ package com.pllanet.gameworld;
 
 import com.pllanet.gameobjects.ScoreLine;
 import com.pllanet.gameobjects.Scrollable;
-import com.pllanet.paddlebear.Constants;
+import com.pllanet.paddlebeargame.Constants;
 
 /**
  * Created by Waznop on 2016-09-16.
