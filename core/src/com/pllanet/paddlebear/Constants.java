@@ -1,5 +1,6 @@
 package com.pllanet.paddlebear;
 
+import com.badlogic.gdx.Gdx;
 import com.pllanet.gameworld.BearEnum;
 
 /**
@@ -20,7 +21,8 @@ public class Constants {
 
     // fixed dimensions
     public final static int GAME_WIDTH = 135;
-    public final static int GAME_HEIGHT = 240;
+    // Dynamically adjust screen height to suite different width and height ratios.
+    public final static int GAME_HEIGHT = (int) (((float) Gdx.graphics.getHeight() / Gdx.graphics.getWidth()) * GAME_WIDTH);
     public final static int GAME_LEFT_BOUND = 24;
     public final static int GAME_RIGHT_BOUND = 114;
     public final static float WH_RATIO = 0.5625f;
@@ -146,15 +148,15 @@ public class Constants {
 
     // credits
     public final static String CREDITS_STRING_1 =
-            "Credits: Alex Chen, Waznop";
+            "Credits: Alex C, Waznop";
     public final static String CREDITS_STRING_2 =
-            "Developer: Alex Chen, Waznop";
+            "Developer: Alex C, Waznop";
     public final static String CREDITS_STRING_3 =
             "Artist: Waznop";
     public final static String CREDITS_STRING_4 =
             "Audio: Waznop";
     public final static String CREDITS_STRING_5 =
-            "Waznop: Hong Tai Wei, Alex Chen";
+            "Waznop: Hong Tai Wei";
     public final static String CREDITS_STRING_6 =
             "Please send comments or bugs to:";
     public final static String CREDITS_STRING_7 =
@@ -162,6 +164,6 @@ public class Constants {
     public final static String CREDITS_STRING_8 =
             "Have a nice day you fools <3";
     public final static String CREDITS_STRING_9 =
-            "ver.1.03 2023";
+            "ver.1.05 2025";
 
 }

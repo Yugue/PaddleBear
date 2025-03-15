@@ -19,6 +19,7 @@ import com.pllanet.paddlebear.Constants;
 import com.pllanet.paddlebear.InputHandler;
 
 import java.util.ArrayList;
+import static com.pllanet.paddlebear.Constants.GAME_HEIGHT;
 
 /**
  * Created by Waznop on 2016-08-17.
@@ -319,9 +320,7 @@ public class GameRenderer {
                 break;
             case MENUSHOP:
             case POSTMENUSHOP:
-                batcher.draw(shopMenu,
-                        Constants.GAME_START_X + 3, Constants.GAME_START_Y + 3,
-                        shopMenu.getRegionWidth() * 3, shopMenu.getRegionHeight() * 3);
+                drawShop();
 
                 batcher.draw(babyCubIcon,
                         Constants.GAME_MID_X - 24, Constants.GAME_MID_Y - 83,
@@ -398,9 +397,7 @@ public class GameRenderer {
                 }
                 break;
             case CREDITS:
-                batcher.draw(shopMenu,
-                        Constants.GAME_START_X + 3, Constants.GAME_START_Y + 3,
-                        shopMenu.getRegionWidth() * 3, shopMenu.getRegionHeight() * 3);
+                drawShop();
                 font.setColor(85/255f, 50/255f, 7/255f, 1);
                 font.draw(batcher, Constants.CREDITS_STRING_1,
                         Constants.GAME_START_X + 13, Constants.GAME_START_Y + 40,
@@ -432,9 +429,7 @@ public class GameRenderer {
                 font.setColor(1, 1, 1, 1);
                 break;
             case HELP:
-                batcher.draw(shopMenu,
-                        Constants.GAME_START_X + 3, Constants.GAME_START_Y + 3,
-                        shopMenu.getRegionWidth() * 3, shopMenu.getRegionHeight() * 3);
+                drawShop();
                 font.getData().setScale(0.4f, -0.4f);
                 font.setColor(85/255f, 50/255f, 7/255f, 1);
                 font.draw(batcher, Constants.TUTORIAL_STRING_1,
@@ -492,7 +487,7 @@ public class GameRenderer {
 
         // draw map bounds
         shapeRenderer.rect(Constants.GAME_START_X + Constants.GAME_LEFT_BOUND, Constants.GAME_START_Y,
-                Constants.GAME_RIGHT_BOUND - Constants.GAME_LEFT_BOUND, Constants.GAME_HEIGHT);
+                Constants.GAME_RIGHT_BOUND - Constants.GAME_LEFT_BOUND, GAME_HEIGHT);
 
         // draw the score line
         Vector2 tmp = scrollHandler.getScoreLine().getPositions().getFirst();
@@ -507,7 +502,7 @@ public class GameRenderer {
 
         shapeRenderer.setColor(1, 1, 1, 1);
         shapeRenderer.rect(0, 0, Constants.SCREEN_WIDTH, Constants.GAME_START_Y);
-        shapeRenderer.rect(0, Constants.GAME_START_Y + Constants.GAME_HEIGHT,
+        shapeRenderer.rect(0, Constants.GAME_START_Y + GAME_HEIGHT,
                 Constants.SCREEN_WIDTH, Constants.GAME_START_Y);
 
         Gdx.gl.glEnable(GL20.GL_BLEND);
@@ -561,6 +556,12 @@ public class GameRenderer {
         // if screen is too narrow
         drawScreenBounds();
 
+    }
+
+    public void drawShop() {
+        batcher.draw(shopMenu,
+        Constants.GAME_START_X + 3, Constants.GAME_START_Y + 3,
+        shopMenu.getRegionWidth() * 3, (int) (GAME_HEIGHT * 0.92));
     }
 
 }
