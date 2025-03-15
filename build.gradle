@@ -21,7 +21,7 @@ buildscript {
 allprojects {
     apply plugin: "eclipse"
 
-    version = '1.03'
+    version = '1.05'
     ext {
         appName = "PaddleBear"
         gdxVersion = '1.12.1'

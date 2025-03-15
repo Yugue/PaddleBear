@@ -160,10 +160,10 @@ public class Constants {
     public final static String CREDITS_STRING_6 =
             "Please send comments or bugs to:";
     public final static String CREDITS_STRING_7 =
-            "inewton.planet@gmail.com";
+            "pllanet.contact@gmail.com";
     public final static String CREDITS_STRING_8 =
             "Have a nice day you fools <3";
     public final static String CREDITS_STRING_9 =
-            "ver.1.05 2025";
+            "ver.1.05";
 
 }
