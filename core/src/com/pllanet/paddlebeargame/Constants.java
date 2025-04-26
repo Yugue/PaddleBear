@@ -5,6 +5,7 @@ import com.pllanet.gameworld.BearEnum;
 
 /**
  * Created by Waznop on 2016-08-18.
+ * Updated by Alex C. on 2025-04-26.
  */
 public class Constants {
 
@@ -142,9 +143,9 @@ public class Constants {
     public final static String TUTORIAL_STRING_7 =
             "Go out of sight and thou wilt... sink?";
     public final static String TUTORIAL_STRING_8 =
-            "Touch the cubs and thou shalt sink...";
+            "Touch the cubs and thou shalt sink.";
     public final static String TUTORIAL_STRING_9 =
-            "...thy currency in the shop later :D";
+            "You can buy other bears in the shop :D";
 
     // credits
     public final static String CREDITS_STRING_1 =
@@ -165,5 +166,4 @@ public class Constants {
             "Have a nice day you fools <3";
     public final static String CREDITS_STRING_9 =
             "ver.1.05";
-
 }
