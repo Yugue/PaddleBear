@@ -23,7 +23,7 @@ android {
         applicationId "com.pllanet.paddlebeargame"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 10511
+        versionCode 10512
         versionName "1.05"
     }
     buildTypes {
